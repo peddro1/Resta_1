@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane fx:id="anchor" prefHeight="500.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="827.0" layoutY="114.0" text="CHAT">
+               <font>
+                  <Font name="K2D Regular" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="message" layoutX="694.0" layoutY="471.0" prefHeight="26.0" prefWidth="244.0" />
+            <Button fx:id="send" layoutX="938.0" layoutY="471.0" mnemonicParsing="false" onAction="#handleButtonEnviar" prefHeight="26.0" prefWidth="56.0" text="Enviar" />
+            <TextArea fx:id="history" editable="false" layoutX="694.0" layoutY="139.0" prefHeight="332.0" prefWidth="300.0" />
+            <TextField fx:id="IP_server" layoutX="765.0" layoutY="45.0" prefHeight="26.0" prefWidth="146.0" />
+            <Label layoutX="703.0" layoutY="49.0" text="IP servidor" />
+            <Label layoutX="703.0" layoutY="85.0" text="Porta" />
+            <TextField fx:id="port" layoutX="765.0" layoutY="81.0" prefHeight="26.0" prefWidth="164.0" />
+            <Button fx:id="exit" layoutX="935.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleButtonSair" prefHeight="26.0" prefWidth="50.0" text="Sair" />
+            <Label fx:id="name" layoutX="703.0" layoutY="14.0" text="Nome" />
+            <Button fx:id="conect" layoutX="917.0" layoutY="45.0" mnemonicParsing="false" onAction="#conectar" prefHeight="26.0" prefWidth="68.0" text="Conectar" />
+            <TextField fx:id="textName" layoutX="765.0" layoutY="10.0" prefHeight="26.0" prefWidth="218.0" />
+            <Pane fx:id="pane" layoutY="2.0" prefHeight="483.0" prefWidth="694.0">
+               <children>
+                  <ImageView fx:id="imgTabuleiro" fitHeight="490.0" fitWidth="694.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/tabuleiro.jpg" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <AnchorPane fx:id="anchor2" prefHeight="490.0" prefWidth="695.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
